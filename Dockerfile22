@@ -1,6 +1,7 @@
 FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
 RUN apt update && \
     apt install -y tzdata iputils-ping curl wget micro python3-pip npm
 RUN pip install --upgrade pip setuptools wheel
